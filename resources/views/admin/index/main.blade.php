@@ -14,3 +14,4 @@
 			<!-- main页面样式end -->
 		</div>
 	</div>
+	@endsection

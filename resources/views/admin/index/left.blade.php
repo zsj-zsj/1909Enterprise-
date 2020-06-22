@@ -19,14 +19,19 @@
 			<dl class="system_log">
 				<dt>
 					<img class="icon1" src="style/admin/img/coin03.png" /><img class="icon2"
-						src="style/admin/img/coin04.png" /> 网站管理<img class="icon3"
+						src="style/admin/img/coin04.png" /> 导航栏管理<img class="icon3"
 						src="style/admin/img/coin19.png" /><img class="icon4"
 						src="style/admin/img/coin20.png" />
 				</dt>
 				<dd>
 					<img class="coin11" src="style/admin/img/coin111.png" /><img class="coin22"
-						src="style/admin/img/coin222.png" /><a class="cks" href="../user.html"
-						target="main">管理员管理</a><img class="icon5" src="style/admin/img/coin21.png" />
+						src="style/admin/img/coin222.png" /><a class="cks" href="{{url('navigation/create')}}"
+						target="main">添加</a><img class="icon5" src="style/admin/img/coin21.png" />
+				</dd>
+				<dd>
+					<img class="coin11" src="style/admin/img/coin111.png" /><img class="coin22"
+						src="style/admin/img/coin222.png" /><a class="cks" href="{{url('navigation/index')}}"
+						target="main">展示</a><img class="icon5" src="style/admin/img/coin21.png" />
 				</dd>
 			</dl>
 			<dl class="system_log">
