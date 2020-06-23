@@ -32,3 +32,25 @@ Route::prefix('navigation')->group(function(){
     Route::post('/change','Admin\Navigation@change');
     Route::post('/changesort','Admin\Navigation@changesort');
 });
+
+//分类
+Route::prefix('cate')->group(function(){
+    Route::get('/create','Admin\Category@create');
+    Route::post('/story','Admin\Category@story');
+    Route::get('/index','Admin\Category@index');
+    Route::post('/del','Admin\Category@del');
+    Route::get('/edit','Admin\Category@edit');
+    Route::post('/upd','Admin\Category@upd');
+    Route::post('/isshow','Admin\Category@isshow');
+});
+//分类详情
+Route::prefix('catecont')->group(function(){
+    Route::get('/create','Admin\CateCont@create');
+    Route::post('/story','Admin\CateCont@story');
+    Route::get('/index','Admin\CateCont@index');
+    Route::post('/del','Admin\CateCont@del');
+    Route::get('/edit','Admin\CateCont@edit');
+    Route::post('/upd','Admin\CateCont@upd');
+    Route::post('/isshow','Admin\CateCont@isshow');
+    Route::post('/changesort','Admin\CateCont@changesort');
+});

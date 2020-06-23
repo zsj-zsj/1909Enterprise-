@@ -7,7 +7,7 @@
 		<div class="pageTop">
 			<div class="page">
 				<img src="/style/admin/img/coin02.png" /><span><a href="#">首页</a>&nbsp;-&nbsp;<a
-					href="#">导航管理</a>&nbsp;-</span>&nbsp;导航展示
+					href="#">导航栏管理</a>&nbsp;-</span>&nbsp;展示
 			</div>
 		</div>
 
@@ -82,6 +82,11 @@
         if(sort==s){
             obj.parent().html('<span class="changesort">'+sort+'</span>')
             return
+        }
+        var rep=/^(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*))$/;
+        if(!rep.test(sort)){
+            alert('请写数字')
+			return
         }
         $.ajaxSetup({
             headers: {
