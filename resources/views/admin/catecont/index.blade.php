@@ -19,7 +19,7 @@
 						<div class="cfD">
                             <input class="addUser" type="text" placeholder="分类" name="title_name" value="{{$query['title_name'] ?? ''}}" />
 							<button class="button">搜索</button>
-							<a class="addA addA1" href="{{url('catecont/create')}}">添加分类+</a>
+							<a class="addA addA1" href="{{url('catecont/create')}}">添加分类详情+</a>
 						</div>
 					</form>
 				</div>

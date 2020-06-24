@@ -53,23 +53,41 @@
 				</dd>
 			</dl>
 			<dl class="system_log">
-					<dt>
-						<img class="icon1" src="style/admin/img/coin05.png" /><img class="icon2"
-							src="style/admin/img/coin06.png" /> 分类详情管理<img class="icon3"
-							src="style/admin/img/coin19.png" /><img class="icon4"
-							src="style/admin/img/coin20.png" />
-					</dt>
-					<dd>
-						<img class="coin11" src="style/admin/img/coin111.png" /><img class="coin22"
-							src="style/admin/img/coin222.png" /><a class="cks" href="{{url('catecont/create')}}"
-							target="main">分类详情添加</a><img class="icon5" src="style/admin/img/coin21.png" />
-					</dd>
-					<dd>
-						<img class="coin11" src="style/admin/img/coin111.png" /><img class="coin22"
-							src="style/admin/img/coin222.png" /><a class="cks" href="{{url('catecont/index')}}"
-							target="main">分类详情展示</a><img class="icon5" src="style/admin/img/coin21.png" />
-					</dd>
-				</dl>
+				<dt>
+					<img class="icon1" src="style/admin/img/coin05.png" /><img class="icon2"
+						src="style/admin/img/coin06.png" /> 分类详情管理<img class="icon3"
+						src="style/admin/img/coin19.png" /><img class="icon4"
+						src="style/admin/img/coin20.png" />
+				</dt>
+				<dd>
+					<img class="coin11" src="style/admin/img/coin111.png" /><img class="coin22"
+						src="style/admin/img/coin222.png" /><a class="cks" href="{{url('catecont/create')}}"
+						target="main">分类详情添加</a><img class="icon5" src="style/admin/img/coin21.png" />
+				</dd>
+				<dd>
+					<img class="coin11" src="style/admin/img/coin111.png" /><img class="coin22"
+						src="style/admin/img/coin222.png" /><a class="cks" href="{{url('catecont/index')}}"
+						target="main">分类详情展示</a><img class="icon5" src="style/admin/img/coin21.png" />
+				</dd>
+			</dl>
+			<dl class="system_log">
+				<dt>
+					<img class="icon1" src="style/admin/img/coin05.png" /><img class="icon2"
+						src="style/admin/img/coin06.png" /> 分类图片管理<img class="icon3"
+						src="style/admin/img/coin19.png" /><img class="icon4"
+						src="style/admin/img/coin20.png" />
+				</dt>
+				<dd>
+					<img class="coin11" src="style/admin/img/coin111.png" /><img class="coin22"
+						src="style/admin/img/coin222.png" /><a class="cks" href="{{url('cateimg/create')}}"
+						target="main">分类图片添加</a><img class="icon5" src="style/admin/img/coin21.png" />
+				</dd>
+				<dd>
+					<img class="coin11" src="style/admin/img/coin111.png" /><img class="coin22"
+						src="style/admin/img/coin222.png" /><a class="cks" href="{{url('cateimg/index')}}"
+						target="main">分类图片展示</a><img class="icon5" src="style/admin/img/coin21.png" />
+				</dd>
+			</dl>
 			<dl class="system_log">
 				<dt>
 					<img class="icon1" src="style/admin/img/coin07.png" /><img class="icon2"

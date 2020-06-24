@@ -54,3 +54,13 @@ Route::prefix('catecont')->group(function(){
     Route::post('/isshow','Admin\CateCont@isshow');
     Route::post('/changesort','Admin\CateCont@changesort');
 });
+//图片分类
+Route::prefix('cateimg')->group(function(){
+    Route::get('/create','Admin\CateImg@create');
+    Route::post('/upload','Admin\CateImg@upload');
+    Route::post('/story','Admin\CateImg@story');
+    Route::get('/index','Admin\CateImg@index');
+    Route::post('/del','Admin\CateImg@del');
+    Route::get('/edit','Admin\CateImg@edit');
+    Route::post('/upd','Admin\CateImg@upd');
+});

@@ -11,7 +11,7 @@ class CateCont extends Controller
 {
     public function create()
     {
-        $category=Category::get();
+        $category=Category::where(['is_del'=>1])->get();
         return view('admin.catecont.create',['category'=>$category]);
     }
 
