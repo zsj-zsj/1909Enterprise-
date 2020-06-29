@@ -22,7 +22,7 @@
                 </div>
                 <div class="bbD">
                     <input type="file" id="file" multiple="true" name="img" />
-                    <img src="" id="img"  alt="">
+                    <img src="" id="img"  width="200px" height="200px" alt="">
                 </div>
                 <div class="bbD">
                     显示位置：<label><input type="radio" name="know" value="1"/>服务指南</label>

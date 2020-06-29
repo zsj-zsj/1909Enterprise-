@@ -23,7 +23,7 @@
                 </div>
                 <div class="bbD">
                     <input type="file" id="file" multiple="true" name="img" />
-                    <img src="{{$data->img}}" id="img"  alt="">
+                    <img src="{{$data->img}}" id="img" width="200px" height="200px"  alt="">
                 </div>
                 <div class="bbD">
                     显示位置：<label><input type="radio" {{$data->know==1 ? 'checked' : ''}} name="know" value="1"/>服务指南</label>
@@ -66,11 +66,11 @@
         $.ajax({
             type : "post",
             data : data,
-            url : "{{url('cateimg/upd')}}",
+            url : "{{url('/cateimg/upd')}}",
             dataType : "json",
             success : function(res){
                 if(res.code == 0 ){
-                    var url = "{{url('cateimg/index')}}"
+                    var url = "{{url('/cateimg/index')}}"
                     location.href=url
                 }
             }

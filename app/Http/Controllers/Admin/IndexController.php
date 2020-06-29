@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Model\Permission;
 
 class IndexController extends Controller
 {
@@ -18,9 +19,13 @@ class IndexController extends Controller
         return view('admin.index.head');
     }
 
-    //坐左
+    //左
     public function left()
     {
+        // $admin=session('user');
+        // $perm = $admin['perm'];
+        // $perm = createTree($perm);
+        
         return view('admin.index.left');
     }
 

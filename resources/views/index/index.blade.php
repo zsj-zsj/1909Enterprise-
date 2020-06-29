@@ -1,4 +1,4 @@
-﻿@extends('index.layout')
+﻿@extends('index.layout.layout')
 
 @section('title', '主页')
 
