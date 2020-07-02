@@ -1,12 +1,10 @@
 ﻿@extends('index.layout.layout')
 
 @section('title', '主页')
-
+  
 @section('content')
 
-<script  type="text/javascript"> 
-$(".navbg").capacityFixed();
-</script>
+
 <div class="container container_col">
   <div class="news-notice">
     <div class="indnews">
@@ -23,70 +21,34 @@ $(".navbg").capacityFixed();
       </div>
     </div>
     <div class="news-txt" id="news">
-      <div class="news-title">
+      <div class="news-title" >
         <div class="news-name tab-nav j-tab-nav">
-        	<a href="javascript:void(0);" class="current">本院动态<i></i></a>
-            <a href="javascript:void(0);" class="">领导活动<i></i></a>
-            <a href="javascript:void(0);" class="">重要发文<i></i></a>
-            <a href="javascript:void(0);" class="">通知公告<i></i></a>
+        	<a href="javascript:void(0);"  v-for="data in info" class="current"><{data['cate_name']}><i></i></a>
         </div>
         <a href="#" class="more">更多 >></a>
       </div>
       <div class="tab-con">
       <div class="j-tab-con">
       <div class="tab-con-item news-con" style="display: block;">
-        <div class="hotnews">
-          <h1>1本会召开第一届第一次主任会议和委员会议</h1>
-          <div class="hotcon"><a href="#">2017年2月20日，中卫仲裁委员会召开了中卫仲裁委员会第一届第一次主任会议和第一届第一次委员会议。会议由中卫市委常委、副市长、中卫仲裁委员会主任袁诗鸣主持。副主任李斌、郝正智、姜丽丽，委员盛建宁、张学文、俞正荣、李宝庆、王占强等出席了会议...</a></div>
-        </div>
-        <ul class="newslist">
-          <li><a href="#">本会开展加强仲裁工作推进会议</a><span>09-10</span></li>
-          <li><a href="#">本会召开第一届仲裁员聘任会议</a><span>09-10</span></li>
-          <li><a href="#">本会与市中级人民法院就建立仲裁与诉讼衔接机制召开座谈会</a><span>09-10</span></li>
-          <li><a href="#">宁夏仲裁工作座谈会在我市召开</a><span>09-10</span></li>
-          <li><a href="#">“一带一路”仲裁发展交流会在我市召开</a><span>09-10</span></li>
+        <ul class="newslist" v-for="data in info">
+          <li><a href="#"><{data['title_name']}></a><span>09-10</span></li>
         </ul>
       </div>
       <div class="tab-con-item news-con" style="display: none;">
-        <div class="hotnews">
-          <h1>2本会召开第一届第一次主任会议和委员会议</h1>
-          <div class="hotcon"><a href="#">2017年2月20日，中卫仲裁委员会召开了中卫仲裁委员会第一届第一次主任会议和第一届第一次委员会议。会议由中卫市委常委、副市长、中卫仲裁委员会主任袁诗鸣主持。副主任李斌、郝正智、姜丽丽，委员盛建宁、张学文、俞正荣、李宝庆、王占强等出席了会议...</a></div>
+          <ul class="newslist" v-for="data in info">
+            <li><a href="#"><{data['title_name']}></a><span>09-10</span></li>
+          </ul>
         </div>
-        <ul class="newslist">
-          <li><a href="#">本会开展加强仲裁工作推进会议</a><span>09-10</span></li>
-          <li><a href="#">本会召开第一届仲裁员聘任会议</a><span>09-10</span></li>
-          <li><a href="#">本会与市中级人民法院就建立仲裁与诉讼衔接机制召开座谈会</a><span>09-10</span></li>
-          <li><a href="#">宁夏仲裁工作座谈会在我市召开</a><span>09-10</span></li>
-          <li><a href="#">"一带一路"仲裁发展交流会在我市召开</a><span>09-10</span></li>
-        </ul>
-      </div>
-      <div class="tab-con-item news-con" style="display: none;">
-        <div class="hotnews">
-          <h1>3本会召开第一届第一次主任会议和委员会议</h1>
-          <div class="hotcon"><a href="#">2017年2月20日，中卫仲裁委员会召开了中卫仲裁委员会第一届第一次主任会议和第一届第一次委员会议。会议由中卫市委常委、副市长、中卫仲裁委员会主任袁诗鸣主持。副主任李斌、郝正智、姜丽丽，委员盛建宁、张学文、俞正荣、李宝庆、王占强等出席了会议...</a></div>
-        </div>
-        <ul class="newslist">
-          <li><a href="#">本会开展加强仲裁工作推进会议</a><span>09-10</span></li>
-          <li><a href="#">本会召开第一届仲裁员聘任会议</a><span>09-10</span></li>
-          <li><a href="#">本会与市中级人民法院就建立仲裁与诉讼衔接机制召开座谈会</a><span>09-10</span></li>
-          <li><a href="#">宁夏仲裁工作座谈会在我市召开</a><span>09-10</span></li>
-          <li><a href="#">"一带一路"仲裁发展交流会在我市召开</a><span>09-10</span></li>
-        </ul>
-      </div>
-      <div class="tab-con-item news-con" style="display: none;">
-        <div class="hotnews">
-          <h1>4本会召开第一届第一次主任会议和委员会议</h1>
-          <div class="hotcon"><a href="#">2017年2月20日，中卫仲裁委员会召开了中卫仲裁委员会第一届第一次主任会议和第一届第一次委员会议。会议由中卫市委常委、副市长、中卫仲裁委员会主任袁诗鸣主持。副主任李斌、郝正智、姜丽丽，委员盛建宁、张学文、俞正荣、李宝庆、王占强等出席了会议...</a></div>
-        </div>
-        <ul class="newslist">
-          <li><a href="#">本会开展加强仲裁工作推进会议</a><span>09-10</span></li>
-          <li><a href="#">本会召开第一届仲裁员聘任会议</a><span>09-10</span></li>
-          <li><a href="#">本会与市中级人民法院就建立仲裁与诉讼衔接机制召开座谈会</a><span>09-10</span></li>
-          <li><a href="#">宁夏仲裁工作座谈会在我市召开</a><span>09-10</span></li>
-          <li><a href="#">"一带一路"仲裁发展交流会在我市召开</a><span>09-10</span></li>
-        </ul>
-      </div>
-      
+        <div class="tab-con-item news-con" style="display: none;">
+            <ul class="newslist" v-for="data in info">
+              <li><a href="#"><{data['title_name']}></a><span>09-10</span></li>
+            </ul>
+          </div>
+          <div class="tab-con-item news-con" style="display: none;">
+              <ul class="newslist" v-for="data in info">
+                <li><a href="#"><{data['title_name']}></a><span>09-10</span></li>
+              </ul>
+            </div>
       </div>
       </div>
     </div>
@@ -97,30 +59,12 @@ $(".navbg").capacityFixed();
       务<br />
       指<br />
       南</div>
-    <div class="iconlist"> <a href="#" class="icon1">
-      <div class="pic"><img src="/style/images/zhinan01.png" /></div>
-      <p>仲裁须知</p>
-      </a>
-      <a href="#" class="icon1">
-      <div class="pic"><img src="/style/images/zhinan06.png" /></div>
-      <p>受案范围</p>
-      </a>
-       <a href="#" class="icon2">
-      <div class="pic"><img src="/style/images/zhinan02.png" /></div>
-      <p>立案提交材料</p>
-      </a> <a href="#" class="icon3">
-      <div class="pic"><img src="/style/images/zhinan03.png" /></div>
-      <p>财产及证据保全</p>
-      </a> <a href="#" class="icon5">
-      <div class="pic"><img src="/style/images/zhinan05.png" /></div>
-      <p>仲裁程序</p>
-      </a> <a href="#" class="icon6">
-      <div class="pic"><img src="/style/images/zhinan04.png" /></div>
-      <p>仲裁条款</p>
-      </a> <a href="#" class="icon7">
-      <div class="pic"><img src="/style/images/zhinan07.png" /></div>
-      <p>常用文书</p>
-      </a> </div>
+    <div class="iconlist" id="znimg" > 
+        <a href="javascript:;" v-for="infos in znimgs"  class="icon1">
+            <div class="pic"><img v-bind:src="[infos['img']]" ></div>
+        <p><{infos['name']}></p>
+        </a>
+    </div> 
   </div>
   <div class="col-box">
     <div class="news-txt col-3">
@@ -175,33 +119,15 @@ $(".navbg").capacityFixed();
   <div class="col-box">
     <div class="col-2-l">
       <div class="tit">在线服务</div>
-      <div class="list"> 
-        <div class="ct">
-          <a href="#" class="color_bj color-1"><div class="pic"><img src="/style/images/zxfw1.png" /></div><p>注册登记</p></a>
-        </div>
-        <div class="ct">
-          <a href="#" class="color_bj color-2"><div class="pic"><img src="/style/images/zxfw2.png" /></div><p>在线立案</p></a>
-        </div>
-        <div class="ct">
-          <a href="#" class="color_bj color-3"><div class="pic"><img src="/style/images/zxfw3.png" /></div><p>在线审批</p></a>
-        </div>
-        <div class="ct">
-          <a href="#" class="color_bj color-4"><div class="pic"><img src="/style/images/zxfw4.png" /></div><p>在线咨询</p></a>
-        </div>
-        <div class="ct">
-          <a href="#" class="color_bj color-5"><div class="pic"><img src="/style/images/zxfw5.png" /></div><p>在线调解</p></a>
-        </div>
-        <div class="ct">
-          <a href="#" class="color_bj color-6"><div class="pic"><img src="/style/images/zxfw6.png" /></div><p>在线查询</p></a>
-        </div>
-        <div class="ct last">
-          <a href="#" class="color_bj color-7"><div class="pic"><img src="/style/images/zxfw7.png" /></div><p>电子送达</p></a>
+      <div class="list" id="zximg" > 
+        <div class="ct last" v-for="v in zximgs" >
+          <a href="javascript:;" class="color_bj color-2" ><div class="pic"><img v-bind:src="[v['img']]" /></div> 
+          <p><{v['name']}></p>
+          </a>
         </div>
         <div class="clearfix"></div>
       </div>
     </div>
-    
-    
   </div>
   <div class="col-box">
     <div class="col-2-r">
@@ -316,24 +242,48 @@ $(".navbg").capacityFixed();
   </div>
 </div>
 
-<script src="/style/js/Tabs.js"></script> 
-<script type="text/javascript">
-	$(function() {
-		$("#link").rTabs({
-			bind : 'hover',
-			animation : 'fadein',
-			auto:false
-		});
-	})
-</script>
-<script type="text/javascript">
-	$(function() {
-		$("#news").rTabs({
-			bind : 'hover',
-			animation : 'fadein',
-			auto:false
-		});
-	})
+<script>
+    var znimg = new Vue({
+      el : "#znimg",
+      data : {
+        znimgs : null
+      },
+      delimiters:['<{','}>'],
+      mounted(){
+          var url = 'fwznimg'
+          axios.post(url).then(function(res){
+            znimg.znimgs=res.data
+          })
+      }
+    })
+
+    var zximg =new Vue({
+      el : "#zximg",
+      data : {
+        zximgs : null,
+      },
+      delimiters:['<{','}>'],
+      mounted(){
+        var url = 'zxfwimg'
+        axios.post(url).then(function(res){
+          zximg.zximgs=res.data
+        })
+      }
+    })
+
+    var cate = new Vue({
+      el : "#news",
+      data : {
+        info: null
+      },
+      delimiters:['<{','}>'],
+      mounted(){
+        var url = 'cateName'
+        axios.post(url).then(function(res){
+          cate.info=res.data
+        })
+      }
+    })
 </script>
 @endsection
 

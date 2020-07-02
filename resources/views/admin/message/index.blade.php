@@ -19,18 +19,20 @@
 					<table border="1" cellspacing="0" cellpadding="0">
 						<tr>
 							<td width="10%" class="tdColor tdC">ID</td>
-							<td width="10%" class="tdColor">留言用户</td>
+							<td width="10%" class="tdColor tdC">表情</td>
 							<td width="10%" class="tdColor">姓名</td>
 							<td width="10%" class="tdColor">内容</td>
-                            <td width="10%" class="tdColor">添加时间</td>
-                        </tr>
+                            <td width="10%" class="tdColor">留言时间</td>
+						</tr>
+						@foreach ($data as $v)
 						<tr >
-							<td></td>
-							<td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>                          
-                        </tr>
+							<td>{{$v->m_id}}</td>
+							<td> <img src="/style/images/{{$v->face}}" > </td>
+							<td>{{$v->name}}</td>
+							<td>{{$v->text}}</td>
+							<td>{{date('Y-m-d H:i:s',$v->time)}}</td>                          
+						</tr>	
+						@endforeach
                     </table>
                     <ul class="pagination">
                         {{-- {{$data->appends($query)->links()}} --}}

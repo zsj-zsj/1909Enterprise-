@@ -9,21 +9,23 @@
 <link href="/style/css/jquery.slideBox.css" rel="stylesheet" type="text/css" />
 <script src="/style/js/jquery.slideBox.min.js" type="text/javascript"></script>
 <script type="text/javascript"  src="/style/js/nav.js"></script>
-
-</head>
-<body>
-    {{-- 头 --}}
-        <script>
-            jQuery(function($){
-                $('#newspic').slideBox({
+<script src="/style/js/vue.min.js"></script>
+<script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+<meta name="csrf-token" content="{{ csrf_token() }}">
+<script>
+        jQuery(function($){
+            $('#newspic').slideBox({
                 duration : 0.3,//滚动持续时间，单位：秒
                 easing : 'linear',//swing,linear//滚动特效
                 delay : 5,//滚动延迟时间，单位：秒
                 hideClickBar : false,//不自动隐藏点选按键
                 clickBarRadius : 10
-                });
             });
+        });
         </script>
+</head>
+<body>
+    {{-- 头 --}}
         <div class="header">
             <div class="container">
                 <div id="weather"></div>
@@ -34,28 +36,9 @@
                 <a href="javascript:;">搜索</a> </div>
             </div>
         </div>
-        <div class="nav">
-            <ul class="" id="navul">
-                <li class="active"><a href="#">首页</a></li>
-                <li><a href="#">关于我们</a></li>
-                <li><a href="#">仲裁动态</a>
-                    <ul>
-                        <li><a href="#">本院动态</a></li>
-                        <li><a href="#">领导活动</a></li>
-                        <li><a href="#">重要发文</a></li>
-                        <li><a href="#">通知公告</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">仲裁须知</a></li>
-                <li><a href="#">仲裁规则</a></li>
-                <li><a href="#">仲裁员</a></li>
-                <li><a href="#">法律制度</a></li>
-                <li><a href="#">在线服务</a>
-                    <ul>
-                        <li><a href="#">在线立案</a></li>
-                        <li><a href="liuyan.html">在线留言</a></li>
-                    </ul>
-                </li>
+        <div class="nav" id="vue">
+            <ul class="" id="navul"  v-for="info in data">
+                <li class=""><a v-bind:href="[info['url']]"><{info['name']}></a></li>
             </ul>
         </div>
 
@@ -130,3 +113,28 @@
         </div>
 </body>
 </html>
+
+<script>
+    $(document).on('mouseover','#navul a',function(){
+        $(this).parent().addClass('active')
+    })
+    $(document).on('mouseout','#navul a',function(){
+        $(this).parent('li').removeClass('active')
+    })
+</script>
+
+<script>
+    var vue = new Vue({
+        el : "#vue",
+        data : {
+            data : null,
+        },
+        delimiters:['<{','}>'],
+        mounted(){
+            var url = 'navigation'
+            axios.post(url).then(function(res){
+                vue.data=res.data
+            })
+        },
+    })
+</script>

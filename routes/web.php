@@ -11,12 +11,21 @@
 |
 */
 
-Route::get('/',function(){
-    phpinfo();
-});
+Route::get('/','Index\IndexController@index');
+Route::post('navigation','Index\IndexController@navigation');  //导航栏
+Route::post('fwznimg','Index\IndexController@fwznimg');  //服务指南img
+Route::post('zxfwimg','Index\IndexController@zxfwimg');  //在线服务img
 
-// Route::get('/','Index\IndexController@index');
+Route::post('cateName','Index\IndexController@cateName');
+
+
+Route::get('list','Index\Cate@list');  //列表
+Route::post('title','Index\Cate@title');  //列表
+
+Route::get('info','Index\Cate@info');  //列表
+
 Route::get('message','Index\Message@index');  //留言
+Route::post('domessage','Index\Message@domessage');  //留言
 Route::get('messagelist','Index\Message@adminlist');  //后天留言列表
 
 // ---------------------------------------------------------------

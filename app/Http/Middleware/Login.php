@@ -21,7 +21,7 @@ class Login
         }
         
         $path=$request->path();
-     
+        // echo $path;
         $route=0;
         $allRoute=['admin','head','left','main'];
         if(in_array($path,$allRoute)){

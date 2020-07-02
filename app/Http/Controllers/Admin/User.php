@@ -46,7 +46,7 @@ class User extends Controller
             $pwd=password_verify($data['pwd'],$res['pwd']);
             if($pwd){
                 $res['perm']=RolePerm::join('permission','permission.permission_id','=','rolepermission.permission_id')
-                                    ->where(['role_id'=>$res['role_id']])->where(['is_del'=>1])->get()->toArray();
+                                    ->where(['role_id'=>$res['role_id']])->where(['is_dels'=>1])->get()->toArray();
                                     // dd($res['perm']);
                 session(['user'=>$res]);
                 return $arr=[
